@@ -8,161 +8,153 @@
   display: none; /*hrome, Safari and Opera */
 }
 
-h2 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-image: linear-gradient(45deg, #f3ec78, #af4261);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.NavBar {
+body {
+  color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  position: fixed;
-  top: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 3rem;
-  z-index: 999999;
-  color: #f3ec78;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-.NavBar .navigate {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-}
-.NavBar .navigate h3 {
-  margin: auto 2rem;
-  font-weight: 400;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.NavBar .links svg {
-  margin: 0 0.5rem;
-  fill: #f3ec78;
+  font-weight: 100;
 }
 
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .LandingPage {
-  font-family: "Poppins", sans-serif;
-  font-size: 4rem;
-  background-image: url("../../public/Images/coding_background.jpg");
-  background-size: cover;
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #f3ec78, #af4261, #695065, #2b193f);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
 }
 .LandingPage .container {
   height: 100vh;
-  width: 100vw;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.8547794118) 11%, rgba(78, 76, 76, 0.6867121849) 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
 }
 .LandingPage .container .content {
-  margin: 10rem 3rem;
+  margin: 5rem 0;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.LandingPage .container .content .hello {
-  font-weight: 400;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #f3ec78;
-}
+.LandingPage .container .content .hello,
 .LandingPage .container .content .heading {
+  text-align: center;
+  margin: 0;
+  font-weight: 100;
+  font-size: 5rem;
+}
+.LandingPage .container .content::after, .LandingPage .container .content::before {
+  content: "";
+  display: block;
+  align-self: center;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+.LandingPage .container .navigate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-image: linear-gradient(45deg, #f3ec78, #af4261);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 400;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.8px);
+  -webkit-backdrop-filter: blur(10.8px);
+}
+.LandingPage .container .navigate h6 {
+  font-weight: 100;
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 1rem;
 }
 
 .AboutMe {
-  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  padding: 5rem 0;
+  background-color: black;
+  color: #f3ec78;
+  display: flex;
+  flex-direction: column;
+}
+.AboutMe .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
   font-size: 1.5rem;
+}
+.AboutMe .container .content {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
+  flex-wrap: wrap;
+  margin: 3rem 0;
 }
-.AboutMe .content {
-  margin: 4rem 0.5rem 4rem 6rem;
-  width: 50%;
+.AboutMe .container .content .text {
+  text-align: justify;
+  max-width: 50%;
+  min-width: 18rem;
+  margin: auto;
 }
-.AboutMe .content p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  width: 80%;
-  margin-top: 1rem;
-  color: #f3ec78;
+.AboutMe .container .content .skills {
+  margin: auto;
 }
-.AboutMe .skills {
-  width: 50%;
-  height: 50%;
-  margin: 4rem 6rem 4rem 0.5rem;
+.AboutMe .container .content .skills .SkillsIcons {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.AboutMe .skills .SkillsIcons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.AboutMe .skills .SkillsIcons .item {
-  margin: 2rem;
+.AboutMe .container .content .skills .SkillsIcons .item {
+  margin: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.AboutMe .skills .SkillsIcons .item svg {
+.AboutMe .container .content .skills .SkillsIcons .item svg {
   fill: #f3ec78;
   transform: scale(2);
   margin: 0.5rem;
 }
-.AboutMe .skills .SkillsIcons .item p {
-  color: #f3ec78;
-}
-.AboutMe .skills .SkillsIcons .one::after,
-.AboutMe .skills .SkillsIcons .six::after {
-  content: "";
-  height: 2px;
-  width: 5rem;
-  background-color: #af4261;
-}
-.AboutMe .skills .SkillsIcons .two,
-.AboutMe .skills .SkillsIcons .five {
-  transform: translate(0, -80px);
-}
-.AboutMe .skills .SkillsIcons .three,
-.AboutMe .skills .SkillsIcons .four {
-  transform: translate(0, -160px);
-}
 
 .Projects {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  height: 100vh;
-  width: 100vw;
   background-color: black;
+  color: #f3ec78;
   display: flex;
 }
 .Projects .content {

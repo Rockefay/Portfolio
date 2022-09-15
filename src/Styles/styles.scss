@@ -12,166 +12,169 @@
   }
 }
 
-h2 {
-  @include text-gradient;
+body {
+  color: $text-color;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
 }
 
-.NavBar {
-  @include heading;
-
-  position: fixed;
-  top: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 3rem;
-  z-index: 999999;
-
-  color: $light-text-color;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-
-  .navigate {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-
-    h3 {
-      margin: auto 2rem;
-      font-weight: 400;
-      width: fit-content;
-    }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-
-  .links {
-    svg {
-      margin: 0 0.5rem;
-      fill: $light-text-color;
-    }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
 .LandingPage {
-  @include hello;
-
-  background-image: url("../../public/Images/coding_background.jpg");
-  background-size: cover;
   height: 100vh;
-  width: 100vw;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    $light-warm-color,
+    $dark-warm-color,
+    $light-cold-color,
+    $dark-cold-color
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 
   .container {
     height: 100vh;
-    width: 100vw;
+    min-height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
     background: rgb(0, 0, 0);
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.8547794117647058) 11%,
-      rgba(78, 76, 76, 0.6867121848739496) 100%
+      rgba(255, 255, 255, 0) 100%
     );
 
     .content {
-      margin: 10rem 3rem;
-      .hello {
-        font-weight: 400;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: $light-text-color;
+      margin: 5rem 0;
+      max-width: 50%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .hello,
+      .heading {
+        text-align: center;
+
+        margin: 0;
+        font-weight: 100;
+        font-size: 5rem;
       }
 
-      .heading {
-        @include text-gradient;
-        font-weight: 400;
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        align-self: center;
+        width: 100%;
+        height: 1px;
+        background-color: $text-color;
+      }
+    }
+
+    .navigate {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      width: fit-content;
+
+      background: rgba($text-color, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10.8px);
+      -webkit-backdrop-filter: blur(10.8px);
+
+      h6 {
+        font-weight: 100;
+        font-size: 2rem;
+        padding: 0.5rem;
+        margin: 1rem;
       }
     }
   }
 }
 
 .AboutMe {
-  @include heading;
+  height: 100vh;
+  padding: 5rem 0;
+  background-color: black;
+  color: $light-warm-color;
 
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
+  flex-direction: column;
 
-  .content {
-    margin: 4rem 0.5rem 4rem 6rem;
-    width: 50%;
-
-    p {
-      @include text;
-      width: 80%;
-      margin-top: 1rem;
-      color: $light-text-color;
-    }
-  }
-
-  .skills {
-    width: 50%;
-    height: 50%;
-    margin: 4rem 6rem 4rem 0.5rem;
-
+  .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .SkillsIcons {
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+
+    .content {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
 
-      .item {
-        margin: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      margin: 3rem 0;
 
-        svg {
-          fill: $light-text-color;
-          transform: scale(2);
-          margin: 0.5rem;
+      .text {
+        text-align: justify;
+        max-width: 50%;
+        min-width: 18rem;
+        margin: auto;
+      }
+
+      .skills {
+        margin: auto;
+        .SkillsIcons {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+
+          .item {
+            margin: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            svg {
+              fill: $light-warm-color;
+              transform: scale(2);
+              margin: 0.5rem;
+            }
+          }
         }
-
-        p {
-          color: $light-text-color;
-        }
-      }
-
-      .one::after,
-      .six::after {
-        content: "";
-        height: 2px;
-        width: 5rem;
-        background-color: $dark-text-color;
-      }
-
-      .two,
-      .five {
-        transform: translate(0, -80px);
-      }
-      .three,
-      .four {
-        transform: translate(0, -160px);
       }
     }
   }
 }
 
 .Projects {
-  @include heading;
-  height: 100vh;
-  width: 100vw;
   background-color: black;
+  color: $light-warm-color;
   display: flex;
 
   .content {
