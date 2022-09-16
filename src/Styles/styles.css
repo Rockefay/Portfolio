@@ -40,10 +40,10 @@ body {
 .LandingPage {
   height: 100vh;
   min-height: 100vh;
-  background: linear-gradient(-45deg, #f3ec78, #af4261, #695065, #2b193f);
+  background: linear-gradient(-45deg, #f3ec78, #9c4a1a, #756c63, #423930);
   background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
+  -webkit-animation: gradient 10s ease infinite;
+          animation: gradient 10s ease infinite;
 }
 .LandingPage .container {
   height: 100vh;
@@ -103,8 +103,7 @@ body {
 }
 
 .AboutMe {
-  height: 100vh;
-  padding: 5rem 0;
+  padding-top: 5rem;
   background-color: black;
   color: #f3ec78;
   display: flex;
@@ -115,6 +114,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 5rem;
   padding: 1rem 3rem;
   font-size: 1.5rem;
 }
@@ -122,16 +122,19 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 3rem 0;
+  justify-content: space-between;
+  margin: 5rem 0;
 }
 .AboutMe .container .content .text {
   text-align: justify;
-  max-width: 50%;
+  max-width: 40%;
   min-width: 18rem;
   margin: auto;
 }
 .AboutMe .container .content .skills {
   margin: auto;
+  margin-top: 3rem;
+  max-width: 60%;
 }
 .AboutMe .container .content .skills .SkillsIcons {
   display: flex;
@@ -141,7 +144,7 @@ body {
   align-items: center;
 }
 .AboutMe .container .content .skills .SkillsIcons .item {
-  margin: 1.5rem;
+  margin: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,7 +159,54 @@ body {
   background-color: black;
   color: #f3ec78;
   display: flex;
+  flex-direction: column;
 }
-.Projects .content {
-  margin: 4rem 0.5rem 4rem 6rem;
+.Projects svg {
+  fill: rgba(117, 108, 99, 0.4);
+}
+.Projects .container {
+  width: 100%;
+  background-color: rgba(117, 108, 99, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.Projects .container .content {
+  margin: 3rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Projects .container .content .text {
+  max-width: 50%;
+  min-width: 18rem;
+  text-align: justify;
+}
+.Projects .container .content .images {
+  margin-top: 2rem;
+  max-width: 50%;
+  min-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Projects .container .content .images img {
+  border-radius: 16px;
+  box-shadow: 25px 35px 43px -21px rgb(0, 0, 0);
+  max-width: 80%;
+  margin: 0.5rem;
+  position: relative;
+}
+.Projects .container .content .images .arows {
+  margin-top: 1.5rem;
+}
+.Projects .container .content .images .arows svg {
+  fill: #756c63;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
