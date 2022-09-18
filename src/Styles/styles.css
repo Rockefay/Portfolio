@@ -182,10 +182,23 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.Projects .container .content:nth-last-child(1) {
+  flex-direction: row;
+}
+.Projects .container .content img {
+  border-radius: 16px;
+  box-shadow: 25px 35px 43px -21px rgb(0, 0, 0);
+  max-width: 80%;
+  margin: 0.5rem;
+  position: relative;
+}
 .Projects .container .content .text {
   max-width: 50%;
   min-width: 18rem;
   text-align: justify;
+}
+.Projects .container .content .text h3 {
+  text-align: left;
 }
 .Projects .container .content .images {
   margin-top: 2rem;
@@ -196,17 +209,28 @@ body {
   justify-content: center;
   align-items: center;
 }
-.Projects .container .content .images img {
-  border-radius: 16px;
-  box-shadow: 25px 35px 43px -21px rgb(0, 0, 0);
-  max-width: 80%;
-  margin: 0.5rem;
-  position: relative;
-}
 .Projects .container .content .images .arows {
   margin-top: 1.5rem;
 }
 .Projects .container .content .images .arows svg {
   fill: #756c63;
   cursor: pointer;
+}
+.Projects .container .content .gallery {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.Projects .container .content .gallery .item {
+  width: 40%;
+  margin: 1rem;
+  text-align: center;
+}
+.Projects .container .content .gallery .item img {
+  max-width: 100%;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=styles.css.map */
