@@ -254,12 +254,14 @@ body {
 
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
 
+        overflow: hidden;
+
         .item {
-          width: 40%;
+          min-width: 40%;
+          max-width: 50%;
           margin: 1rem;
 
           text-align: center;
@@ -269,6 +271,67 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+.Contact {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: $light-warm-color;
+
+    label {
+      font-size: 2rem;
+    }
+
+    input,
+    textarea {
+      height: 2rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $light-cold-color;
+      color: $light-warm-color;
+      font-size: 1.5rem;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+
+      &[type="submit"] {
+        background-color: rgba($light-warm-color, 0.7);
+        text-align: center;
+        color: black;
+        border: none;
+        border-radius: 16px;
+        width: 70%;
+      }
+    }
+
+    textarea {
+      height: 5rem;
+      resize: none;
+    }
+  }
+
+  .links {
+    margin: 2rem auto 4rem auto;
+    svg {
+      fill: $light-warm-color;
+      transform: scale(1.5);
+      margin: 0.5rem;
     }
   }
 }
