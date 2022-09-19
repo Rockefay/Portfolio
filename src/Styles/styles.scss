@@ -1,14 +1,24 @@
-@import "./variables";
+@import "./consts";
 @import "./mixins";
 
 * {
   margin: 0;
   padding: 0;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  user-select: none;
+  /* width */
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 
-  &::-webkit-scrollbar {
-    display: none; /*hrome, Safari and Opera */
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $dark-cold-color;
+    border-radius: 16px;
   }
 }
 
@@ -74,7 +84,7 @@ body {
 
         margin: 0;
         font-weight: 100;
-        font-size: 5rem;
+        font-size: 9vh;
       }
 
       &::after,
@@ -105,7 +115,7 @@ body {
 
       h6 {
         font-weight: 100;
-        font-size: 2rem;
+        font-size: 3vh;
         padding: 0.5rem;
         margin: 1rem;
       }
@@ -129,7 +139,7 @@ body {
 
     margin-top: 5rem;
     padding: 1rem 3rem;
-    font-size: 1.5rem;
+    font-size: 3vh;
 
     .content {
       display: flex;
@@ -140,7 +150,6 @@ body {
       margin: 5rem 0;
 
       .text {
-        text-align: justify;
         max-width: 40%;
         min-width: 18rem;
         margin: auto;
@@ -195,9 +204,19 @@ body {
     justify-content: center;
     align-items: center;
 
-    font-size: 1.5rem;
+    font-size: 3vh;
+
+    img {
+      border-radius: 16px;
+      -webkit-box-shadow: 25px 35px 43px -21px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 25px 35px 43px -21px rgba(0, 0, 0, 1);
+      box-shadow: 25px 35px 43px -21px rgba(0, 0, 0, 1);
+      max-width: 80%;
+      position: relative;
+    }
+
     .content {
-      &:nth-last-child(1) {
+      &:nth-last-child(2) {
         flex-direction: row;
       }
 
@@ -210,24 +229,10 @@ body {
       justify-content: space-between;
       align-items: center;
 
-      img {
-        border-radius: 16px;
-        -webkit-box-shadow: 25px 35px 43px -21px rgba(0, 0, 0, 1);
-        -moz-box-shadow: 25px 35px 43px -21px rgba(0, 0, 0, 1);
-        box-shadow: 25px 35px 43px -21px rgba(0, 0, 0, 1);
-        max-width: 80%;
-        margin: 0.5rem;
-        position: relative;
-      }
-
       .text {
+        margin-top: 1.5rem;
         max-width: 50%;
         min-width: 18rem;
-        text-align: justify;
-
-        h3 {
-          text-align: left;
-        }
       }
 
       .images {
@@ -245,30 +250,35 @@ body {
           svg {
             fill: $light-cold-color;
             cursor: pointer;
+
+            &:hover {
+              fill: $light-warm-color;
+            }
           }
         }
       }
-      .gallery {
-        width: 100%;
-        margin-top: 5rem;
+    }
+    .gallery {
+      width: 100%;
+      margin-top: 1rem;
 
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-        overflow: hidden;
+      overflow-x: scroll;
+      white-space: nowrap;
+      .item {
+        min-width: fit-content;
+        max-width: 50%;
+        margin: 0.5rem;
 
-        .item {
-          min-width: 40%;
-          max-width: 50%;
-          margin: 1rem;
-
-          text-align: center;
-          img {
-            max-width: 100%;
-            margin-bottom: 1rem;
-          }
+        text-align: center;
+        img {
+          max-width: 40vw;
+          min-width: 18rem;
+          margin-bottom: 1rem;
+          box-shadow: none;
         }
       }
     }
@@ -282,6 +292,12 @@ body {
   justify-content: center;
   align-items: center;
 
+  h3 {
+    color: $light-warm-color;
+    font-size: 3vh;
+    margin: 2rem;
+  }
+
   form {
     width: 40%;
     margin: auto;
@@ -293,7 +309,7 @@ body {
     color: $light-warm-color;
 
     label {
-      font-size: 2rem;
+      font-size: 3vh;
     }
 
     input,
@@ -303,11 +319,16 @@ body {
       border: none;
       border-bottom: 1px solid $light-cold-color;
       color: $light-warm-color;
-      font-size: 1.5rem;
+      font-size: 2vh;
       width: 100%;
 
       &:focus {
         outline: none;
+      }
+
+      &::placeholder {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
       }
 
       &[type="submit"] {
@@ -321,8 +342,8 @@ body {
     }
 
     textarea {
-      height: 5rem;
-      resize: none;
+      height: 15rem;
+      resize: vertical;
     }
   }
 

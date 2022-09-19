@@ -26,6 +26,7 @@ function Contact() {
 
   return (
     <div className="Contact">
+      <h3>Contact Me</h3>
       <form ref={form} onSubmit={sendEmail}>
         <input type="text" name="user_name" placeholder="Name" />
         <input type="email" name="user_email" placeholder="Email" />

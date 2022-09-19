@@ -1,11 +1,23 @@
 * {
   margin: 0;
   padding: 0;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /* width */
+  /* Track */
+  /* Handle */
 }
-*::-webkit-scrollbar {
-  display: none; /*hrome, Safari and Opera */
+* ::-webkit-scrollbar {
+  width: 0;
+}
+* ::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+* ::-webkit-scrollbar-thumb {
+  background: #423930;
+  border-radius: 16px;
 }
 
 body {
@@ -70,7 +82,7 @@ body {
   text-align: center;
   margin: 0;
   font-weight: 100;
-  font-size: 5rem;
+  font-size: 9vh;
 }
 .LandingPage .container .content::after, .LandingPage .container .content::before {
   content: "";
@@ -97,7 +109,7 @@ body {
 }
 .LandingPage .container .navigate h6 {
   font-weight: 100;
-  font-size: 2rem;
+  font-size: 3vh;
   padding: 0.5rem;
   margin: 1rem;
 }
@@ -116,7 +128,7 @@ body {
   align-items: center;
   margin-top: 5rem;
   padding: 1rem 3rem;
-  font-size: 1.5rem;
+  font-size: 3vh;
 }
 .AboutMe .container .content {
   display: flex;
@@ -126,7 +138,6 @@ body {
   margin: 5rem 0;
 }
 .AboutMe .container .content .text {
-  text-align: justify;
   max-width: 40%;
   min-width: 18rem;
   margin: auto;
@@ -171,7 +182,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 3vh;
+}
+.Projects .container img {
+  border-radius: 16px;
+  box-shadow: 25px 35px 43px -21px rgb(0, 0, 0);
+  max-width: 80%;
+  position: relative;
 }
 .Projects .container .content {
   margin: 3rem;
@@ -182,23 +199,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.Projects .container .content:nth-last-child(1) {
+.Projects .container .content:nth-last-child(2) {
   flex-direction: row;
 }
-.Projects .container .content img {
-  border-radius: 16px;
-  box-shadow: 25px 35px 43px -21px rgb(0, 0, 0);
-  max-width: 80%;
-  margin: 0.5rem;
-  position: relative;
-}
 .Projects .container .content .text {
+  margin-top: 1.5rem;
   max-width: 50%;
   min-width: 18rem;
-  text-align: justify;
-}
-.Projects .container .content .text h3 {
-  text-align: left;
 }
 .Projects .container .content .images {
   margin-top: 2rem;
@@ -216,24 +223,31 @@ body {
   fill: #756c63;
   cursor: pointer;
 }
-.Projects .container .content .gallery {
+.Projects .container .content .images .arows svg:hover {
+  fill: #f3ec78;
+}
+.Projects .container .gallery {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
 }
-.Projects .container .content .gallery .item {
-  min-width: 40%;
+.Projects .container .gallery .item {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   max-width: 50%;
-  margin: 1rem;
+  margin: 0.5rem;
   text-align: center;
 }
-.Projects .container .content .gallery .item img {
-  max-width: 100%;
+.Projects .container .gallery .item img {
+  max-width: 40vw;
+  min-width: 18rem;
   margin-bottom: 1rem;
+  box-shadow: none;
 }
 
 .Contact {
@@ -242,6 +256,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.Contact h3 {
+  color: #f3ec78;
+  font-size: 3vh;
+  margin: 2rem;
 }
 .Contact form {
   width: 40%;
@@ -254,7 +273,7 @@ body {
   color: #f3ec78;
 }
 .Contact form label {
-  font-size: 2rem;
+  font-size: 3vh;
 }
 .Contact form input,
 .Contact form textarea {
@@ -263,12 +282,25 @@ body {
   border: none;
   border-bottom: 1px solid #756c63;
   color: #f3ec78;
-  font-size: 1.5rem;
+  font-size: 2vh;
   width: 100%;
 }
 .Contact form input:focus,
 .Contact form textarea:focus {
   outline: none;
+}
+.Contact form input::-moz-placeholder, .Contact form textarea::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.Contact form input:-ms-input-placeholder, .Contact form textarea:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.Contact form input::placeholder,
+.Contact form textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 .Contact form input[type=submit],
 .Contact form textarea[type=submit] {
@@ -280,8 +312,8 @@ body {
   width: 70%;
 }
 .Contact form textarea {
-  height: 5rem;
-  resize: none;
+  height: 15rem;
+  resize: vertical;
 }
 .Contact .links {
   margin: 2rem auto 4rem auto;

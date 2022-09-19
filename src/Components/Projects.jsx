@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { cardGameImages } from "../consts";
 
 function Projects() {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const changeImage = (direction) => {
+    if (direction === "forward") {
+      if (imageIndex < cardGameImages.length - 1) setImageIndex(imageIndex + 1);
+      else setImageIndex(0);
+    } else {
+      if (imageIndex > 0) setImageIndex(imageIndex - 1);
+      else setImageIndex(cardGameImages.length - 1);
+    }
+  };
+
   return (
     <div className="Projects">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -21,12 +34,22 @@ function Projects() {
             </div>
           </div>
           <div className="images">
-            <img src="Images\Card_Game1.png" alt="" />
+            <img src={cardGameImages[imageIndex]} alt="" />
             <div className="arows">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                onClick={() => changeImage("back")}
+              >
                 <path d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z"></path>
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                onClick={() => changeImage("forward")}
+              >
                 <path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path>
               </svg>
             </div>
@@ -46,35 +69,35 @@ function Projects() {
             <img src="Images\adventofjs.jpg" alt="" />
           </div>
           <div className="text">Some of the challanges:</div>
-          <div className="gallery">
-            <div className="item">
-              <img src="Images\Budget.png" alt="" />
-              <div>Simple budget calculator</div>
-            </div>
-            <div className="item">
-              <img src="Images\Weather.png" alt="" />
-              <div>Weather app using an API</div>
-            </div>
-            <div className="item">
-              <img src="Images\Dynamic_Table.png" alt="" />
-              <div>Table of data with sorting and editing</div>
-            </div>
-            <div className="item">
-              <img src="Images\Food_Order.png" alt="" />
-              <div>Food Order app</div>
-            </div>
-            <div className="item">
-              <img src="Images\Form_Validator.png" alt="" />
-              <div>Form Validator</div>
-            </div>
-            <div className="item">
-              <img src="Images\Password_Generator.png" alt="" />
-              <div>Password Generator</div>
-            </div>
-            <div className="item">
-              <img src="Images\Rock_Paper_Scissors1.png" alt="" />
-              <div>Rock, Paper, Scissors game</div>
-            </div>
+        </div>
+        <div className="gallery">
+          <div className="item">
+            <img src="Images\Budget.png" alt="" />
+            <div>Simple budget calculator</div>
+          </div>
+          <div className="item">
+            <img src="Images\Weather.png" alt="" />
+            <div>Weather app using an API</div>
+          </div>
+          <div className="item">
+            <img src="Images\Dynamic_Table.png" alt="" />
+            <div>Table of data with sorting and editing</div>
+          </div>
+          <div className="item">
+            <img src="Images\Food_Order.png" alt="" />
+            <div>Food Order app</div>
+          </div>
+          <div className="item">
+            <img src="Images\Form_Validator.png" alt="" />
+            <div>Form Validator</div>
+          </div>
+          <div className="item">
+            <img src="Images\Password_Generator.png" alt="" />
+            <div>Password Generator</div>
+          </div>
+          <div className="item">
+            <img src="Images\Rock_Paper_Scissors1.png" alt="" />
+            <div>Rock, Paper, Scissors game</div>
           </div>
         </div>
       </div>
