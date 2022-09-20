@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { adventProjects, cardGameImages } from "../consts";
 
-function Projects() {
+function Projects({ position, setPosition }) {
+  const component = useRef();
+  useEffect(() => {
+    setPosition(component.current?.getBoundingClientRect().top);
+  }, [setPosition]);
+
   return (
-    <div className="Projects">
+    <div className="Projects" ref={component}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fillOpacity="1"

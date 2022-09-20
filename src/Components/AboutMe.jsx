@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SkillsIcons from "./SkillsIcons";
 
-function AboutMe() {
+function AboutMe({ position, setPosition }) {
+  const component = useRef();
+  useEffect(() => {
+    setPosition(component.current?.getBoundingClientRect().top);
+  }, [setPosition]);
+
   return (
-    <div className="AboutMe">
+    <div className="AboutMe" ref={component}>
       <div className="container">
         <h2>About Me</h2>
         <div className="content">

@@ -1,7 +1,14 @@
 import emailjs from "@emailjs/browser";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-function Contact() {
+function Contact({ position, setPosition }) {
+  const component = useRef();
+  useEffect(() => {
+    setPosition(
+      component.current?.getBoundingClientRect().top + window.innerHeight
+    );
+  }, [setPosition]);
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -25,7 +32,7 @@ function Contact() {
   };
 
   return (
-    <div className="Contact">
+    <div className="Contact" ref={component}>
       <h3>Contact Me</h3>
       <form ref={form} onSubmit={sendEmail}>
         <input type="text" name="user_name" placeholder="Name" />
