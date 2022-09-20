@@ -101,6 +101,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin: 1rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -186,7 +187,7 @@ body {
 }
 .Projects .container img {
   border-radius: 16px;
-  box-shadow: 25px 35px 43px -21px rgb(0, 0, 0);
+  box-shadow: 8px 7px 24px 0px rgb(0, 0, 0);
   max-width: 80%;
   position: relative;
 }
@@ -196,58 +197,53 @@ body {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .Projects .container .content:nth-last-child(2) {
   flex-direction: row;
 }
 .Projects .container .content .text {
-  margin-top: 1.5rem;
+  margin: 1.5rem 2rem;
   max-width: 50%;
   min-width: 18rem;
 }
+.Projects .container .content .text a {
+  color: #f3ec78;
+}
 .Projects .container .content .images {
-  margin-top: 2rem;
-  max-width: 50%;
+  max-width: 40%;
   min-width: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.Projects .container .content .images .arows {
-  margin-top: 1.5rem;
-}
-.Projects .container .content .images .arows svg {
-  fill: #756c63;
-  cursor: pointer;
-}
-.Projects .container .content .images .arows svg:hover {
-  fill: #f3ec78;
+.Projects .container .content .images img {
+  margin: 2rem 0;
 }
 .Projects .container .gallery {
   width: 100%;
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow-x: scroll;
-  white-space: nowrap;
+  margin: 1rem;
 }
 .Projects .container .gallery .item {
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  max-width: 50%;
-  margin: 0.5rem;
   text-align: center;
 }
 .Projects .container .gallery .item img {
   max-width: 40vw;
   min-width: 18rem;
   margin-bottom: 1rem;
-  box-shadow: none;
+}
+.Projects .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Projects .carousel .carousel-slider {
+  overflow: visible;
+}
+.Projects .carousel .control-dots {
+  bottom: -4vh;
 }
 
 .Contact {
