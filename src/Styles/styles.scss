@@ -5,21 +5,7 @@
   margin: 0;
   padding: 0;
   user-select: none;
-  /* width */
-  ::-webkit-scrollbar {
-    width: 0;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: $dark-cold-color;
-    border-radius: 16px;
-  }
+  overflow: hidden;
 }
 
 body {
@@ -37,15 +23,6 @@ body {
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
@@ -87,8 +64,6 @@ body {
       justify-content: center;
       align-items: center;
 
-      animation: fade-in 2s linear;
-
       .hello,
       .heading {
         text-align: center;
@@ -117,9 +92,7 @@ body {
       flex-wrap: wrap;
 
       width: fit-content;
-      margin: 1rem;
-
-      animation: fade-in 2s linear;
+      margin: 1.5rem;
 
       background: rgba($text-color, 0.1);
       border-radius: 16px;

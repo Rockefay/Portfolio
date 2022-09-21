@@ -16,9 +16,9 @@ function App() {
         projectsPosition={projectsPosition}
         contactPosition={contactPosition}
       />
-      <AboutMe position={aboutPosition} setPosition={setAboutPosition} />
-      <Projects position={projectsPosition} setPosition={setProjectsPosition} />
-      <Contact position={contactPosition} setPosition={setContactPosition} />
+      <AboutMe setPosition={setAboutPosition} />
+      <Projects setPosition={setProjectsPosition} />
+      <Contact setPosition={setContactPosition} />
     </div>
   );
 }

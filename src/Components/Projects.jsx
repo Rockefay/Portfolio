@@ -1,9 +1,10 @@
+import "aos/dist/aos.css";
 import React, { useEffect, useRef } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { adventProjects, cardGameImages } from "../consts";
 
-function Projects({ position, setPosition }) {
+function Projects({ setPosition }) {
   const component = useRef();
   useEffect(() => {
     setPosition(component.current?.getBoundingClientRect().top);
@@ -19,7 +20,7 @@ function Projects({ position, setPosition }) {
       </svg>
       <div className="container">
         <h2>Projects</h2>
-        <div className="content">
+        <div className="content project1" data-aos="fade-up">
           <div className="text">
             <h3>Card Game</h3>
             <div>
@@ -47,7 +48,7 @@ function Projects({ position, setPosition }) {
           </div>
         </div>
 
-        <div className="content">
+        <div className="content project2" data-aos="fade-up">
           <div className="text">
             <h3>Advent of JavaScript</h3>
             <div>
@@ -61,24 +62,24 @@ function Projects({ position, setPosition }) {
             <img src="Images\adventofjs.jpg" alt="" />
           </div>
           <div className="text">Some of the challanges:</div>
-        </div>
-        <div className="gallery">
-          <Carousel
-            showStatus={false}
-            showThumbs={false}
-            swipeable={true}
-            emulateTouch={true}
-            className="carousel"
-          >
-            {adventProjects.map((project) => {
-              return (
-                <div className="item" key={project.src}>
-                  <img src={project.src} alt="" />
-                  <div>{project.description}</div>
-                </div>
-              );
-            })}
-          </Carousel>
+          <div className="gallery">
+            <Carousel
+              showStatus={false}
+              showThumbs={false}
+              swipeable={true}
+              emulateTouch={true}
+              className="carousel"
+            >
+              {adventProjects.map((project) => {
+                return (
+                  <div className="item" key={project.src}>
+                    <img src={project.src} alt="" />
+                    <div>{project.description}</div>
+                  </div>
+                );
+              })}
+            </Carousel>
+          </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

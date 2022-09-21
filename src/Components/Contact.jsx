@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 import React, { useEffect, useRef } from "react";
 
-function Contact({ position, setPosition }) {
+function Contact({ setPosition }) {
   const component = useRef();
   useEffect(() => {
     setPosition(
