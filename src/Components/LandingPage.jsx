@@ -18,9 +18,27 @@ function LandingPage({ aboutPosition, projectsPosition, contactPosition }) {
           </h2>
         </div>
         <div className="navigate">
-          <h6 onClick={() => window.scrollTo(0, aboutPosition)}>About Me</h6>
-          <h6 onClick={() => window.scrollTo(0, projectsPosition)}>Projects</h6>
-          <h6 onClick={() => window.scrollTo(0, contactPosition)}>Contact</h6>
+          <h6
+            onClick={() =>
+              window.scrollTo({ top: aboutPosition, behavior: "smooth" })
+            }
+          >
+            About Me
+          </h6>
+          <h6
+            onClick={() =>
+              window.scrollTo({ top: projectsPosition, behavior: "smooth" })
+            }
+          >
+            Projects
+          </h6>
+          <h6
+            onClick={() =>
+              window.scrollTo({ top: contactPosition, behavior: "smooth" })
+            }
+          >
+            Contact
+          </h6>
         </div>
       </div>
     </div>

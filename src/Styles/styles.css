@@ -5,9 +5,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  /* width */
   /* Track */
-  /* Handle */
 }
 * ::-webkit-scrollbar {
   width: 0;
@@ -15,9 +13,8 @@
 * ::-webkit-scrollbar-track {
   border-radius: 10px;
 }
-* ::-webkit-scrollbar-thumb {
-  background: #423930;
-  border-radius: 16px;
+*::-webkit-scrollbar {
+  display: none; /*hrome, Safari and Opera */
 }
 
 body {
@@ -49,22 +46,6 @@ body {
     background-position: 0% 50%;
   }
 }
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .LandingPage {
   height: 100vh;
   min-height: 100vh;
@@ -92,8 +73,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -webkit-animation: fade-in 2s linear;
-          animation: fade-in 2s linear;
 }
 .LandingPage .container .content .hello,
 .LandingPage .container .content .heading {
@@ -119,9 +98,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 1rem;
-  -webkit-animation: fade-in 2s linear;
-          animation: fade-in 2s linear;
+  margin: 1.5rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -339,4 +316,18 @@ body {
   fill: #f3ec78;
   transform: scale(1.5);
   margin: 0.5rem;
+}
+
+.ScrollToTop {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2vh;
+}
+.ScrollToTop svg {
+  fill: #f3ec78;
+  opacity: 0.6;
 }/*# sourceMappingURL=styles.css.map */
