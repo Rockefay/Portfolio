@@ -367,3 +367,26 @@ body {
     opacity: 0.6;
   }
 }
+
+.Alert {
+  width: 20%;
+  min-width: fit-content;
+  height: 5vh;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 2vh;
+  background: rgba($text-color, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.8px);
+  -webkit-backdrop-filter: blur(10.8px);
+}
