@@ -61,7 +61,7 @@ function Contact({ setPosition }) {
             </svg>
           </a>
           <a
-            href="https://pl.linkedin.com/"
+            href="http://www.linkedin.com/in/krzysztof-purgat-448047251"
             target="_blank"
             rel="noreferrer noopener"
           >

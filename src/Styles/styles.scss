@@ -236,6 +236,35 @@ body {
         a {
           color: $light-warm-color;
         }
+
+        .button {
+          width: fit-content;
+          height: 3vh;
+          margin-top: 2vh;
+          padding: 1vh;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          font-size: 2.5vh;
+          border: solid 1px $light-warm-color;
+          transition: all 0.5s;
+
+          svg {
+            fill: $light-warm-color;
+            margin: 0.5vh;
+          }
+
+          a {
+            text-decoration: none;
+            margin: 0.5vh;
+          }
+
+          &:hover {
+            transform: translateY(-1vh);
+          }
+        }
       }
 
       .images {
@@ -336,6 +365,11 @@ body {
         border: none;
         border-radius: 16px;
         width: 70%;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: rgba($light-warm-color, 1);
+        }
       }
     }
 
