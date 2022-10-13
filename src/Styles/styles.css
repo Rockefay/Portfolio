@@ -330,6 +330,7 @@ body {
   border-radius: 16px;
   width: 70%;
   transition: all 0.5s;
+  cursor: pointer;
 }
 .Contact form input[type=submit]:hover,
 .Contact form textarea[type=submit]:hover {

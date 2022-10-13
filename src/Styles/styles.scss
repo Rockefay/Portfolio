@@ -366,6 +366,7 @@ body {
         border-radius: 16px;
         width: 70%;
         transition: all 0.5s;
+        cursor: pointer;
 
         &:hover {
           background-color: rgba($light-warm-color, 1);
