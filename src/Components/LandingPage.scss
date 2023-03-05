@@ -1,0 +1,70 @@
+@import "../Styles/consts";
+@import "../Styles/mixins";
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.LandingPage {
+  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    $light-warm-color,
+    $dark-warm-color,
+    $light-cold-color,
+    $dark-cold-color
+  );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+
+  .container {
+    height: 100vh;
+    min-height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+
+    .content {
+      margin: 5rem 0;
+      max-width: 50%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .hello,
+      .heading {
+        text-align: center;
+
+        margin: 0;
+        font-weight: 100;
+        font-size: 9vh;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        align-self: center;
+        width: 100%;
+        height: 1px;
+        background-color: $text-color;
+      }
+    }
+  }
+}

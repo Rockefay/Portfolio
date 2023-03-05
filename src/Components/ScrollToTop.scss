@@ -1,0 +1,16 @@
+@import "../Styles/consts";
+@import "../Styles/mixins";
+
+.ScrollToTop {
+  width: fit-content;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  margin: 2vh;
+  cursor: pointer;
+  svg {
+    fill: $light-warm-color;
+    opacity: 0.6;
+  }
+}

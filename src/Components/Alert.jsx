@@ -1,5 +1,6 @@
 import "aos/dist/aos.css";
 import React from "react";
+import "./Alert.scss";
 
 function Alert({ alert }) {
   if (alert)

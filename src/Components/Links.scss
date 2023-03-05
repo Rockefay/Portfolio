@@ -1,0 +1,11 @@
+@import "../Styles/consts";
+@import "../Styles/mixins";
+
+.links {
+  margin: 2rem auto 4rem auto;
+  svg {
+    fill: $text-color;
+    transform: scale(2);
+    margin: 1em;
+  }
+}

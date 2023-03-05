@@ -1,0 +1,77 @@
+@import "../Styles/consts";
+@import "../Styles/mixins";
+
+.Contact {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    color: $light-warm-color;
+    font-size: 3vh;
+    margin: 2rem;
+  }
+
+  form {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: $light-warm-color;
+
+    label {
+      font-size: 3vh;
+    }
+
+    input,
+    textarea {
+      height: 2rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $light-cold-color;
+      color: $light-warm-color;
+      font-size: 2vh;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+      }
+
+      &[type="submit"] {
+        background-color: rgba($light-warm-color, 0.7);
+        text-align: center;
+        color: black;
+        border: none;
+        border-radius: 16px;
+        width: 70%;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba($light-warm-color, 1);
+        }
+      }
+    }
+
+    textarea {
+      height: 15rem;
+      resize: vertical;
+    }
+  }
+
+  .links {
+    svg {
+      fill: $light-warm-color;
+    }
+  }
+}
