@@ -9,8 +9,9 @@
 
   margin: 2vh;
   cursor: pointer;
-  svg {
-    fill: $light-warm-color;
-    opacity: 0.6;
-  }
+}
+
+.scroll-arrow {
+  color: $light-warm-color;
+  transform: scale(2.5);
 }

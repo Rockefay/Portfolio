@@ -1,0 +1,24 @@
+@import "../Styles/consts";
+@import "../Styles/mixins";
+
+.SkillsIcons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .item {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    svg {
+      fill: $light-warm-color;
+      transform: scale(1.5);
+      margin: 0.5rem;
+    }
+  }
+}

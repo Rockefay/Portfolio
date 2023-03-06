@@ -36,27 +36,10 @@
       .skills {
         margin: auto;
         margin-top: 3rem;
-        max-width: 60%;
+        max-width: 50%;
 
-        .SkillsIcons {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
-
-          .item {
-            margin: 2rem 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            svg {
-              fill: $light-warm-color;
-              transform: scale(2);
-              margin: 0.5rem;
-            }
-          }
+        @media only screen and (orientation: portrait) {
+          max-width: 80%;
         }
       }
     }
