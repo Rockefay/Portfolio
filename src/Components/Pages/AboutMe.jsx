@@ -1,7 +1,7 @@
 import "aos/dist/aos.css";
 import React from "react";
+import SkillsIcons from "../SkillsIcons";
 import "./AboutMe.scss";
-import SkillsIcons from "./SkillsIcons";
 
 function AboutMe() {
   return (

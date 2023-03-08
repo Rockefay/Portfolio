@@ -2,7 +2,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
 import "./LandingPage.scss";
-import Links from "./Links";
 
 function LandingPage() {
   useEffect(() => {
@@ -19,7 +18,6 @@ function LandingPage() {
             I'm Krzysztof
           </h2>
         </div>
-        <Links />
       </div>
     </div>
   );

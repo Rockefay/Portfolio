@@ -1,8 +1,7 @@
 import emailjs from "@emailjs/browser";
 import React, { useRef, useState } from "react";
-import Alert from "./Alert";
+import Alert from "../Alert";
 import "./Contact.scss";
-import Links from "./Links";
 
 function Contact() {
   const [alert, setAlert] = useState(false);
@@ -41,7 +40,6 @@ function Contact() {
           <textarea name="message" placeholder="Message" />
           <input type="submit" value="Send" />
         </form>
-        <Links />
       </div>
       <Alert alert={alert} />
     </>

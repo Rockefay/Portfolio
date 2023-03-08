@@ -3,7 +3,7 @@ import React from "react";
 import { SiGithub } from "react-icons/si";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { adventProjects, cardGameImages, ebHelperImages } from "../consts";
+import { adventProjects, cardGameImages, ebHelperImages } from "../../consts";
 import "./Projects.scss";
 
 function Projects() {
@@ -23,7 +23,7 @@ function Projects() {
             <h3>Eurobusiness Helper</h3>
             <div>
               Cooperative project created to help while playing the board game Eurobusiness. The
-              application helps with transactions between players, bank and themselves. As a member
+              application handles transactions between players and bank requests. As a member
               responsible for front-end, I created the layout of the application as well as build
               the interface that users see and interact with.
             </div>
