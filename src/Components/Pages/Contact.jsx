@@ -1,48 +1,35 @@
-import emailjs from "@emailjs/browser";
-import React, { useRef, useState } from "react";
-import Alert from "../Alert";
+import React from "react";
+import { BsFilePdfFill } from "react-icons/bs";
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import "./Contact.scss";
 
 function Contact() {
-  const [alert, setAlert] = useState(false);
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          e.target.reset();
-          setAlert(true);
-          setTimeout(() => setAlert(false), 3000);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
   return (
-    <>
-      <div className="Contact">
-        <h3>Contact Me</h3>
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="user_name" placeholder="Name" />
-          <input type="email" name="user_email" placeholder="Email" />
-          <textarea name="message" placeholder="Message" />
-          <input type="submit" value="Send" />
-        </form>
+    <div className="Contact">
+      <div className="contact-me-text" data-aos="fade-right">
+        Contact Me
       </div>
-      <Alert alert={alert} />
-    </>
+      <div className="contact-details" data-aos="fade-left">
+        <div className="contact-item">
+          <SiGmail className="contact-icon" />
+          <a href="mailto: kr.purgat@gmail.com">kr.purgat@gmail.com</a>
+        </div>
+        <div className="contact-item">
+          <SiLinkedin className="contact-icon" />
+          <a href="https://www.linkedin.com/in/krzysztof-purgat-448047251/">Linkedin</a>
+        </div>
+        <div className="contact-item">
+          <BsFilePdfFill className="contact-icon" />
+          <a href="https://drive.google.com/file/d/1z7L2grOPaII2YWOOVAncsOyo6AdpuOuN/view?usp=sharing">
+            CV
+          </a>
+        </div>
+        <div className="contact-item">
+          <SiGithub className="contact-icon" />
+          <a href="https://github.com/Rockefay">GitHub</a>
+        </div>
+      </div>
+    </div>
   );
 }
 

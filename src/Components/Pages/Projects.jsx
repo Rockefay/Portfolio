@@ -1,5 +1,6 @@
 import "aos/dist/aos.css";
 import React from "react";
+import { MdOutlineWebAsset } from "react-icons/md";
 import { SiGithub } from "react-icons/si";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -27,9 +28,15 @@ function Projects() {
               responsible for front-end, I created the layout of the application as well as build
               the interface that users see and interact with.
             </div>
-            <div className="button">
-              <SiGithub />
-              <a href="https://github.com/Purgaty/EurobusinessHelper">Code on GitHub</a>
+            <div className="buttons-container">
+              <div className="button">
+                <SiGithub />
+                <a href="https://github.com/Purgaty/EurobusinessHelper">Code on GitHub</a>
+              </div>
+              <div className="button">
+                <MdOutlineWebAsset />
+                <a href="https://eb-helper.azurewebsites.net/">Live version</a>
+              </div>
             </div>
           </div>
           <div className="images">
