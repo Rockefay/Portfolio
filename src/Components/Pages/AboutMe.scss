@@ -1,0 +1,47 @@
+@import "../../Styles/consts";
+@import "../../Styles/mixins";
+
+.AboutMe {
+  padding-top: 5rem;
+  background-color: black;
+  color: $light-warm-color;
+
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5rem;
+    padding: 1rem 3rem;
+    font-size: 3vh;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      margin: 5rem 0;
+
+      .text {
+        max-width: 40%;
+        min-width: 18rem;
+        margin: auto;
+      }
+
+      .skills {
+        margin: auto;
+        margin-top: 3rem;
+        max-width: 50%;
+
+        @media only screen and (orientation: portrait) {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+}

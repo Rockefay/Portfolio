@@ -1,0 +1,17 @@
+@import "../Styles/consts";
+@import "../Styles/mixins";
+
+.ScrollToTop {
+  width: fit-content;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+
+  margin: 1em;
+  cursor: pointer;
+}
+
+.scroll-arrow {
+  color: $light-warm-color;
+  transform: scale(2.5);
+}

@@ -1,0 +1,67 @@
+@import "../../Styles/consts";
+@import "../../Styles/mixins";
+
+.Contact {
+  overflow: hidden;
+  height: 50vh;
+  padding-bottom: 3em;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  color: $light-warm-color;
+}
+
+.contact-me-text {
+  font-size: 3em;
+  margin-right: 0.5em;
+  &::after {
+    content: "";
+    height: 100%;
+    border: 1px solid $light-warm-color;
+    margin-left: 0.5em;
+  }
+
+  @media only screen and (orientation: portrait) {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    &::after {
+      content: "";
+      width: 100%;
+      border: 1px solid $light-warm-color;
+      margin: 0;
+    }
+  }
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+}
+
+.contact-item {
+  height: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5em;
+
+  a {
+    color: $light-warm-color;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+}
+
+.contact-icon {
+  font-size: 2em;
+}
