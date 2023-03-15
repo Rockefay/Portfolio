@@ -25,17 +25,25 @@ function Projects() {
             <div>
               Cooperative project created to help while playing the board game Eurobusiness. The
               application handles transactions between players and bank requests. As a member
-              responsible for front-end, I created the layout of the application as well as build
+              responsible for front-end, I designed the layout of the application as well as build
               the interface that users see and interact with.
             </div>
             <div className="buttons-container">
               <div className="button">
                 <SiGithub />
-                <a href="https://github.com/Purgaty/EurobusinessHelper">Code on GitHub</a>
+                <a
+                  href="https://github.com/Purgaty/EurobusinessHelper"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Code on GitHub
+                </a>
               </div>
               <div className="button">
                 <MdOutlineWebAsset />
-                <a href="https://eb-helper.azurewebsites.net/">Live version</a>
+                <a href="https://eb-helper.azurewebsites.net/" target="_blank" rel="noreferrer">
+                  Live version
+                </a>
               </div>
             </div>
           </div>
@@ -67,7 +75,9 @@ function Projects() {
             </div>
             <div className="button">
               <SiGithub />
-              <a href="https://github.com/Rockefay/Card-Game">Code on GitHub</a>
+              <a href="https://github.com/Rockefay/Card-Game" target="_blank" rel="noreferrer">
+                Code on GitHub
+              </a>
             </div>
           </div>
           <div className="images">
@@ -96,11 +106,19 @@ function Projects() {
               The project contains 24 challenges. Each challenge includes HTMS and CSS files and the
               main task is to write JavaScript code to give functionality to the site. Link to the
               project:&nbsp;
-              <a href="https://www.adventofjs.com/">www.adventofjs.com</a>
+              <a href="https://www.adventofjs.com/" target="_blank" rel="noreferrer">
+                www.adventofjs.com
+              </a>
             </div>
             <div className="button">
               <SiGithub />
-              <a href="https://github.com/Rockefay/Advent-of-JavaScript">Code on GitHub</a>
+              <a
+                href="https://github.com/Rockefay/Advent-of-JavaScript"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Code on GitHub
+              </a>
             </div>
           </div>
           <div className="images">

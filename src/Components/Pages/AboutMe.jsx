@@ -12,7 +12,8 @@ function AboutMe() {
           <div className="text" data-aos="zoom-in-down">
             I'm a computer science student and an aspiring front-end developer. I started my journey
             with programming three years ago, but I discovered front-end a year ago. Currently I am
-            looking for my first job in which I will improve my skills and get first experience.
+            looking for my first job in which I will improve my skills and get first commercial
+            experience.
           </div>
           <div className="skills" data-aos="zoom-in-down">
             <SkillsIcons />

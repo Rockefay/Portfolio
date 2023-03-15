@@ -1,4 +1,9 @@
-export const ebHelperImages = ["Images/EBHelper1.png"];
+export const ebHelperImages = [
+  "Images/EBHelper1.png",
+  "Images/EBHelper2.png",
+  "Images/EBHelper3.png",
+  "Images/EBHelper4.png",
+];
 
 export const cardGameImages = [
   "Images/Card_Game1.png",
