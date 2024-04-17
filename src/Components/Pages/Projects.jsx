@@ -1,6 +1,5 @@
 import "aos/dist/aos.css";
 import React from "react";
-import { MdOutlineWebAsset } from "react-icons/md";
 import { SiGithub } from "react-icons/si";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -37,12 +36,6 @@ function Projects() {
                   rel="noreferrer"
                 >
                   Code on GitHub
-                </a>
-              </div>
-              <div className="button">
-                <MdOutlineWebAsset />
-                <a href="https://eb-helper.azurewebsites.net/" target="_blank" rel="noreferrer">
-                  Live version
                 </a>
               </div>
             </div>
