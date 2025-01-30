@@ -17,7 +17,7 @@ function Contact() {
         <div className="contact-item">
           <SiLinkedin className="contact-icon" />
           <a
-            href="https://www.linkedin.com/in/krzysztof-purgat-448047251/"
+            href="https://www.linkedin.com/in/krzysztof-purgat/"
             target="_blank"
             rel="noreferrer"
           >
