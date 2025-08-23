@@ -28,6 +28,9 @@
       margin: 5rem 0;
 
       .text {
+        @media only screen and (orientation: portrait) {
+          max-width: 100%;
+        }
         max-width: 40%;
         min-width: 18rem;
         margin: auto;
